@@ -1,0 +1,117 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fnil\fcharset0 HelveticaNeue-Italic;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Capstone2 Airbnb Listing Bangkok\
+Fernando Giade\
+JCDSOL-013\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b\fs26 \cf0 Latar Belakang
+\f2\b0 \
+Bangkok merupakan salah satu kota yang menjadi destinasi wisata utama di dunia. Seorang investor berencana untuk menyediakan dana untuk pembangunan unit yang akan disewakan kepada para wisatawan di kota Bangkok menggunakan Airbnb. Airbnb merupakan market place online yang menjangkau pasar internasional untuk penyewaan tempat tinggal sementara. Investor ingin mencari informasi-informasi dari data riwayat unit Airbnb di Bangkok untuk pengambilan keputusan yang lebih baik agar rencana usahanya mendatangkan keuntungan.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 Pernyataan Masalah
+\f2\b0 \
+Investor ingin mengetahui 
+\f1\b **kriteria apa saja yang membuat sebuah unit akan disewa oleh wisatawan, kemudian unit tersebut mendapatkan ulasan yang nantinya memperbesar peluang unit tersebut disewa kembali oleh wisatawan lain**
+\f2\b0 . Informasi ini akan membantu investor untuk mengurangi potensi kerugian atas investasi yang akan dilakukan jika unit yang dibuka tidak disewa dan meningkatkan nilai kompetitif dari unit.\
+\
+Untuk selanjutnya pada proyek capstone 2 ini, kami akan mencoba menjawab pertanyaan 
+\f1\b Bagaimana kriteria unit yang mendapatkan ulasan dibandingkan dengan unit yang tidak mendapatkan ulasan?\
+\
+Sumber data: 
+\f2\b0 airbnb listings bangkok.csv\
+
+\f1\b \
+
+\f2\b0 Ringkasan data yang sudah dibersihkan:\
+1. Jumlah data/unit hasil pembersihan menjadi 15.830 dari 15.854. Terdapat 24 baris yang dihapus\
+2. Terdapat 6.652 pemilik unit yang unik dengan rata-rata pemilik memiliki 14 unit yang disewa\
+3. Harga rata-rata sewa adalah 2.413,44 Baht sedangkan nilai tengahnya adalah 1.426,00 Baht\
+4. Terdapat 263.788 ulasan, dengan ulasan terlama pada 15 Desember 2012 dan ulasan terbaru pada 28 Desember 2022\
+5. Rata-rata jumlah hari sewa yang di setting oleh pemilik adalah 15,27 hari\
+6. Rata-rata jumlah hari unit dapat disewa selama 1 tahun kedepan adalah 244,35 hari\
+\
+Kemudian data akan di ekspor setelah dibersihkan dengan nama "Airbnb Listing Bangkok Cleaned.csv"\
+\
+\
+
+\f1\b 1. Berdasarkan `host_name` yaitu nama depan pemilik unit
+\f2\b0 \
+Dengan mengidentifikasi pemilik yang mendapatkan ulasan yang banyak (unitnya laku tersewa), maka investor akan mendapatkan informasi pemilik mana yang berhasil menjalankan usahanya. Investor akan memberikan 
+\f3\i *value*
+\f2\i0  yang lebih kepada wisatawan yang akhirnya memberikan pengalaman terbaik saat wisatawan mengunjungi kota Bangkok.\
+\
+Pada bagian ini kami akan menjawab pertanyaan berikut:\
+1. Pemilik terbaik yaitu pemilik yang memiliki jumlah (ulasan / jumlah unit) terbanyak\
+2. Pemilik dengan jumlah ulasannya dari tahun ke tahun semakin membaik\
+3. Pemilik yang memiliki ulasan dan unit terbanyak, lokasi unitnya berada di distrik mana dan apa jenis unitnya\
+\
+
+\f1\b 2. Berdasarkan `neighbourhood` yaitu distrik tempat unit berada
+\f2\b0 \
+Pada bagian ini akan dicari tahu bagaimana pengaruh distrik tempat unit berada:\
+1. Distrik mana yang memiliki unit dan ulasan yang terbanyak\
+2. Apakah terdapat hubungan lokasi antara distrik-distrik yang paling banyak memiliki unit dan ulasan\
+3. Alasan mengapa distrik tertentu memiliki unit dan ulasan paling banyak\
+\
+
+\f1\b 3. Berdasarkan `room_type` yaitu tipe unit
+\f2\b0 \
+Pada bagian ini akan dilihat fitur yang berkaitan dengan tipe unit `room_type`.\
+Pada bagian ini kami akan menjawab pertanyaan berikut:  \
+1. Tipe unit yang mana yang paling banyak tersedia\
+2. Tipe unit yang mana yang paling banyak diulas\
+\
+
+\f1\b 4. Berdasarkan `price` yaitu harga sewa
+\f2\b0 \
+Pada bagian ini ingin diketahui apakah terdapat hubungan antara harga dengan unit mendapat ulasan atau tidak.\
+Pada bagian ini kami akan menjawab pertanyaan:\
+1. Apakah terdapat hubungan antara harga dengan unit mendapat ulasan atau tidak\
+2. Bagaimana hubungan antara harga dengan jumlah ulasan\
+\
+
+\f1\b 5. Berdasarkan `availability_365` yaitu jumlah hari unit dapat disewa selama 1 tahun kedepan
+\f2\b0 \
+Pada bagian ini ingin diketahui apakah terdapat hubungan antara `availability_365` dengan unit mendapat ulasan atau tidak.\
+Pada bagian ini kami akan menjawab pertanyaan berikut:\
+1. Bagaimana sebaran `availability_365`\
+2. Apakah terdapat hubungan antara `availability_365` dengan jumlah ulasan\
+\
+
+\f1\b Kesimpulan
+\f2\b0 \
+Dari analisis yang telah dilakukan, diperoleh beberapa kesimpulan terkait unit yang mendapatkan ulasan:\
+1. Dari 15,830 unit, hanya 10,050 unit yang telah mendapatkan ulasan. Artinya untuk mendapatkan ulasan diperlukan usaha yang lebih karena 1 dari 3 unit yang ada, kemungkinan tidak mendapat ulasan\
+2. Terdapat 6,652 pemilik yang bersaing satu sama lain agar unitnya disewa dan mendapatkan ulasan\
+3. Telah tersedia unit yang disewa untuk seluruh 50 distrik di kota Bangkok\
+2. Harga rata-rata sewa adalah 2.413,44 Baht sedangkan nilai tengahnya adalah 1.426,00 Baht. Semakin tinggi harga semakin kecil peluang unit disewa dan mendapatkan ulasan\
+3. Distrik yang mendapat banyak ulasan berada di distrik Vadhana dan Khoing Toei\
+4. Unit yang mendapat ulasan terbanyak berasal dari tipe unit Entire home/apt\
+\
+
+\f1\b Rekomendasi
+\f2\b0 \
+1. Investor disarankan untuk melakukan 
+\f3\i *research*
+\f2\i0  lebih detail terkait unit-unit yang miliki oleh Suchada, Pim dan Bua sebagai pemilik terbaik serta Evan, Curry dan Tony yang berhasil meningkatkan jumlah ulasan terbanyak dibandingkan tahun sebelumnya\
+2. Disarankan investor membuka unit baru di sebelah tenggara atau timur sungai Chao Praya di distrik yang dekat dengan pusat wisata dan stasiun mrt sperti distrik Vadhana dan Khiong Toei\
+3. Disarankan investor membuka unit baru dengan jenis unit Entire home/apt atau Hotel room\
+4. Lengkapi unit dengan fasilitas wifi, air conditioner dan dapur ringkas pada unit Entire home/apt\
+5. Rentan harga yang disarankan dari 1.461 Baht (harga rata-rata tipe unit Entire home/apt) sampai dengan 2.227 Baht (harga rata-rata unit mendapatkan ulasan)\
+6. Usahakan untuk segera mendapatkan badge Superhosts jika unit sudah mulai tersewa untuk meningkatkan peluang unit muncul di website Airbnb\
+7. Pengisian `availability_365` oleh pemilik pada aplikasi Airbnb disarankan dimaksimalkan di nilai 365 yang artinya unit dapat bebas disewa untuk 1 tahun kedepan\
+8. Pengisian `minimal_nights` oleh pemilik pada aplikasi Airbnb disarankan 1 hari, kecuali pemilik ingin memberikan promo pengurangan harga sewa jika penyewa sewa unit dalam jangka waktu yang lama\
+\
+Dengan mengikuti langkah-langkah di atas diharapkan unit baru yang akan disewakan dapat segera tersewa dan mendapatkan ulasan.\
+}
